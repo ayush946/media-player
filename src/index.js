@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import {videoPlayerReducer} from './Redux'; // import the reducer
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Create the store
+const store = createStore(videoPlayerReducer);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
