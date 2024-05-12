@@ -253,7 +253,7 @@ function VideoPlayer() {
                 <FontAwesomeIcon icon={faHeadphones}/>
             </div>}
             {buffering && <div className='audioIcon fa-3x'>
-                <FontAwesomeIcon icon={faSpinner} style={{color:'white'}}/>
+                <FontAwesomeIcon icon={faSpinner} style={{color:'white'}} spinPulse/>
                 </div>}
             <div  style={{display:'flex', justifyContent:'center'}}>
                 <div ref={controlRef} className={fullScreen ? (isControlsVisible?'controls-fullscreen':'controls-fullscreen-hidden') :(playing?'player-options': 'player-option-paused')}>
