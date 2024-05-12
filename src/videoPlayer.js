@@ -51,22 +51,26 @@ function VideoPlayer() {
 
     useEffect(() => {
         const video = videoRef.current;
-      
-        video.addEventListener('waiting', () => {
-          // Pause the player and show a loading spinner.
-          setBuffering(true);
-        });
-      
-        video.addEventListener('playing', () => {
-          // Resume playback and hide the loading spinner.
-          setBuffering(false);
-        });
-      
-        return () => {
-          video.current.removeEventListener('waiting');
-          video.current.removeEventListener('playing');
+    
+        const handleWaiting = () => {
+            // Pause the player and show a loading spinner.
+            setBuffering(true);
         };
-      }, []);
+    
+        const handlePlaying = () => {
+            // Resume playback and hide the loading spinner.
+            setBuffering(false);
+        };
+    
+        video.addEventListener('waiting', handleWaiting);
+        video.addEventListener('playing', handlePlaying);
+    
+        return () => {
+            video.removeEventListener('waiting', handleWaiting);
+            video.removeEventListener('playing', handlePlaying);
+        };
+    }, []);
+    
     
     const togglePlayPause = useCallback(() => {
         if(playing){
