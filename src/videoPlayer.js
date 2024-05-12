@@ -1,7 +1,7 @@
 import React , {useEffect, useRef, useState, useCallback} from 'react';
 import "./videoPlayer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faRotateRight, faRotateLeft, faExpand, faForwardStep, faBackwardStep, faVolumeXmark, faVolumeHigh, faClone, faHeadphones, faTruckLoading, faSpinner} from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faRotateRight, faRotateLeft, faExpand, faForwardStep, faBackwardStep, faVolumeXmark, faVolumeHigh, faClone, faHeadphones, faSpinner} from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux';
 import {nextVideo, prevVideo} from './Redux'
 
