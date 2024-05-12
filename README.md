@@ -2,4 +2,6 @@
 
 ## Tech Stack used :- React.js , Redux
 
-### The videos for the testing purpose is stored in ./src/assest folder.
+### The videos for testing purposes are stored in ./src/assest folder.
+
+## Link for the live site :- [Click here](https://media-player-ten-gamma.vercel.app/) 
